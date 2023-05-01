@@ -1,0 +1,214 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100%;
+    min-height: 100%;
+    box-sizing: inherit;
+    font-size: 62.5%;
+}
+:root{
+    --font-small:1.6rem;
+    --font-big:2rem;
+    --font-bigger:2.4rem;
+    --font-biggest:3rem;
+    --color-primary:#440A67;
+    --color-primary2:#400D51;
+    --color-secondary:#93329E;
+    --color-ternary:#B4AEE8;
+    --color-specify:#B3005E;
+    --color-warning:#FF8D29;
+    --color-submit:#379237;
+    --color-bg:#41AEA9;
+    --color-bg-front:#28DF99;
+    --font-regular:400;
+    --font-medium:500;
+    --font-Semi-bold:600;
+    --font-bold:700;
+    --font-Extra-bold:800;
+    --radius-small:.3rem;
+    --radius-big:.5rem;
+    --radius-bigger:1rem;
+    --shadow:.2rem .2rem .5rem .2rem rgba(0,0,0,0.5);
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-primary);
+    font-size: var(--font-small);
+    font-weight: var(--font-regular);
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+.login-wrapper{
+    width: 90%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.registrar-container{
+    background-color: var(--color-primary2);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--radius-bigger);
+}
+
+.user-input,.user-submit{
+    width: 90%;
+    height: 6rem;
+    margin-bottom: 1.5rem;
+    padding: .5rem 2rem;
+    background-color: darkgray;
+    border-radius: .7rem;
+    box-shadow: var(--shadow);
+    outline: none;
+    border: none;
+    text-align: center;
+    font-size: var(--font-big);
+    font-weight: var(--font-bold);
+}
+.user-submit{
+    background-color: var(--color-submit);
+}
+
+.data-input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+
+}
+.warning-wrapper{
+    width: 90%;
+    height: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    display: none;
+}
+.notice-board{
+    width: 90%;
+    height: 90%;
+    margin: 1.5rem 0;
+    padding: .5rem 2rem;
+    background-color: var(--color-ternary);
+    border-radius: .7rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.note{
+    margin: 2rem;
+    padding: 1rem;
+    font-size: var(--font-big);
+}
+.detail-wrapper{
+    width: 95%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.meal-container{
+    width: 100%;
+    height: 100%;
+    background-color: #28DF99;
+    display: block;
+    position: relative;
+    overflow: scroll;
+
+}
+.item{
+    width: 100%;
+    height: 100%;
+    background-color: #379237;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.person-front{
+    width: 80%;
+    height: 60%;
+    background-color: #93329E;
+    position: relative;
+}
+.person-name{
+    width: 80%;
+    height: 3rem;
+    background-color: #B4AEE8;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+.person-cost{
+    width: 80%;
+    height: 6rem;
+    background-color: #B4AEE8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.liner{
+    width: .2rem;
+    height: 2rem;
+    background-color: #FF8D29;
+}
+.person-button{
+    width: 80%;
+    height: 2rem;
+    background-color: #B4AEE8;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+}
+.hide-page{
+    display: none;
+}
+@media screen and (min-width: 480px) {
+    .login-wrapper,.details-wrapper{
+        width: 80%;
+        height: 60%;
+    }
+}
+@media screen and (min-width: 720px) {
+    .login-wrapper,.details-wrapper{
+        width: 60%;
+        height: 50%;
+    }
+}
